@@ -35,7 +35,7 @@ public class SocioController {
     @PostMapping
     public ResponseEntity<Socio> guardar(@RequestBody  Socio socio){
         Socio nuevoSocio = socioService.guardar(socio);
-        return new ResponseEntity<>(nuevoSocio HttpStatus.CREATED);
+        return new ResponseEntity<>(nuevoSocio, HttpStatus.CREATED);
     }
 
 }
